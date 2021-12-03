@@ -6,13 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <!-- Optional JavaScript -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>    
+        <link rel="stylesheet" type="text/css" href="custom.css">
         
         <title>Thomas Dufresne | Game Programmer</title>
     </head>
-
-    <!-- Why are you reading this? Its a lot nicer with CSS... -->
 
     <body>
         <!--Navbar-->
@@ -40,7 +37,7 @@
         </nav>
         
         <!--About me-->
-        <div class="m-3 p-5 " id="About">
+        <div class="m-3 p-5" id="About">
             <div class="">
                 <h1>I'm Thomas Dufresne</h1>
                 <p class="fs-2 mb-2">
@@ -53,30 +50,52 @@
                 -->
             </div>
         </div>
-        <!--<hr>-->
-
 
         <!--Portfolio projects-->
-        <div class="pt-5 pb-2" style="background-color:#E8E8E8">
+        <div class="portfolio-panel pt-5 pb-2">
             <div class="px-3 col-12 col-lg-9 col-xl-8 mx-auto" id="Portfolio">
                 <h1 class="text-center">Projects</h1>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                        <div class="card h-100">
+                <!--Filters-->
+                <div class="py-2">
+                    <!--Buttons-->
+                    <div class="d-none d-md-flex justify-content-center row-cols-5 gap-3">
+                        <button class="col portfolio-button btn btn-secondary" type="button" onclick="buttonClicked(this.name, '')" name="All" disabled>All</button>
+                        <button class="col portfolio-button btn btn-secondary" type="button" onclick="buttonClicked(this.name, 'unity')" name="Unity">Unity</button>
+                        <button class="col portfolio-button btn btn-secondary" type="button" onclick="buttonClicked(this.name, 'cpp')" name="C++">C++</button>
+                    </div>
+                    <!--Dropdown for mobile-->
+                    <div class="dropdown d-flex d-md-none justify-content-center">
+                        <button class="btn btn-secondary dropdown-toggle col-6 text-center" type="button" id="portfolioDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            All
+                        </button>
+                        <ul class="dropdown-menu col-6" aria-labelledby="portfolioDropdownButton">
+                            <li><button class="portfolio-button dropdown-item text-center" type="button" onclick="buttonClicked(this.name, '')" name="All" disabled>All</button></li>
+                            <li><button class="portfolio-button dropdown-item text-center" type="button" onclick="buttonClicked(this.name, 'unity')" name="Unity">Unity</button></li>
+                            <li><button class="portfolio-button dropdown-item text-center" type="button" onclick="buttonClicked(this.name, 'cpp')" name="C++">C++</button></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!--Card list-->
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 justify-content-center g-3">
+                    <div class="col card-container">
+                        <div class="card h-100 unity">
+                            <img src="Images/GoingCritical.png" class="card-img-top" alt="Going Critical Image">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title text-center">Going Critical</h5>
                                 <p class="card-text">
                                     2-4 player local coop party game made in Unity. Major project for my second year at AIE, in a group of 7 people.
                                 </p>
                                 <div class="d-flex justify-content-center gap-2 mt-auto">
-                                    <a class="btn btn-primary col-5" href="https://github.com/TheTastyGravy/SpacePirates" type="button">Github</a>
-                                    <a class="btn btn-primary col-5" href="https://andrew-spinks.itch.io/going-critical" type="button">Play</a>
+                                    <a class="btn btn-primary col-5" type="button" href="https://github.com/TheTastyGravy/SpacePirates">Github</a>
+                                    <a class="btn btn-primary col-5" type="button" href="https://andrew-spinks.itch.io/going-critical">Play</a>
                                 </div>
                             </div>
+                            <small class="card-footer text-muted">Unity</small>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card h-100">
+                    <div class="col card-container">
+                        <div class="card h-100 unity">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title text-center">Train to Teasan</h5>
                                 <p class="card-text">
@@ -84,14 +103,15 @@
                                     my first year at AIE.
                                 </p>
                                 <div class="d-flex justify-content-center gap-2 mt-auto">
-                                    <a class="btn btn-primary col-5" href="https://github.com/AIESydneyStudents/BlindWurclsElk" type="button">Github</a>
-                                    <a class="btn btn-primary col-5" href="TTT_Build/index.html" type="button">Play</a>
+                                    <a class="btn btn-primary col-5" type="button" href="https://github.com/AIESydneyStudents/BlindWurclsElk">Github</a>
+                                    <a class="btn btn-primary col-5" type="button" href="TTT_Build/index.html">Play</a>
                                 </div>
                             </div>
+                            <small class="card-footer text-muted">Unity</small>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card h-100">
+                    <div class="col card-container">
+                        <div class="card h-100 unity">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title text-center">Ice Track Trains</h5>
                                 <p class="card-text">
@@ -99,43 +119,35 @@
                                     and can move between tracks using switch tracks to avoid collisions.
                                 </p>
                                 <div class="d-flex justify-content-center gap-2 mt-auto">
-                                    <a class="btn btn-primary col-5" href="https://github.com/comi999/Game-Jam" type="button">Github</a>
-                                    <a class="btn btn-primary col-5" href="IceTrackTrains_Build/index.html" type="button">Play</a>
+                                    <a class="btn btn-primary col-5" type="button" href="https://github.com/comi999/Game-Jam">Github</a>
+                                    <a class="btn btn-primary col-5" type="button" href="IceTrackTrains_Build/index.html">Play</a>
                                 </div>
                             </div>
+                            <small class="card-footer text-muted">Unity</small>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card h-100">
+                    <div class="col card-container">
+                        <div class="card h-100 cpp">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-center">Networked Physics System</h5>
+                                <h5 class="card-title text-center">Networked Physics System & Multiplayer FPS</h5>
                                 <p class="card-text">
                                     Generic system in C++ with RakNet and Raylib, using a custom 3D physics system with friction and 
                                     SAT collision detection. Authoritative server/client model with client side prediction and input 
-                                    processing.
-                                </p>
-                                <div class="d-flex justify-content-center gap-2 mt-auto">
-                                    <a class="btn btn-primary col-5" href="https://github.com/TheTastyGravy/Networked-Physics-System" type="button">Github</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-center">Multiplayer FPS</h5>
-                                <p class="card-text">
-                                    Basic multiplayer FPS game made using my Networked Physics System. Players have a rocket launcher 
+                                    processing.<br>
+                                    Aditionaly, a basic multiplayer FPS was made with the system. Players have a rocket launcher 
                                     dealing damage and appling a force to players its projectiles hit.
                                 </p>
                                 <div class="d-flex justify-content-center gap-2 mt-auto">
-                                    <a class="btn btn-primary col-5" href="#https://github.com/TheTastyGravy/Multiplayer-FPS" type="button">Github</a>
+                                    <a class="btn btn-primary col-5" type="button" href="https://github.com/TheTastyGravy/Networked-Physics-System">System Github</a>
+                                    <a class="btn btn-primary col-5" type="button" href="https://github.com/TheTastyGravy/Multiplayer-FPS">Game Github</a>
                                 </div>
                             </div>
+                            <small class="card-footer text-muted">C++</small>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card h-100">
+                    <div class="col card-container">
+                        <div class="card h-100 unity">
+                            <img src="Images/DisappearingAct.png" class="card-img-top" alt="Disapearing Act Image">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title text-center">The Disapearing Act</h5>
                                 <p class="card-text">
@@ -143,13 +155,15 @@
                                     puzzles to unlock a box and escape the room.
                                 </p>
                                 <div class="d-flex justify-content-center gap-2 mt-auto">
-                                    <a class="btn btn-primary col-5" href="https://github.com/loganryan01/VirtualRealityAssignment" type="button">Github</a>
+                                    <a class="btn btn-primary col-5" type="button" href="https://github.com/loganryan01/VirtualRealityAssignment">Github</a>
                                 </div>
                             </div>
+                            <small class="card-footer text-muted">Unity</small>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card h-100">
+                    <div class="col card-container">
+                        <div class="card h-100 cpp">
+                            <img src="Images/GLSL.png" class="card-img-top" alt="GLSL Image">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title text-center">GLSL Demo</h5>
                                 <p class="card-text">
@@ -157,13 +171,14 @@
                                     lighting, and has GPU instanced particles.
                                 </p>
                                 <div class="d-flex justify-content-center gap-2 mt-auto">
-                                    <a class="btn btn-primary col-5" href="https://github.com/TheTastyGravy/GLSL-Demo" type="button">Github</a>
+                                    <a class="btn btn-primary col-5" type="button" href="https://github.com/TheTastyGravy/GLSL-Demo">Github</a>
                                 </div>
                             </div>
+                            <small class="card-footer text-muted">C++</small>
                         </div>
-                    </div> 
-                    <div class="col">
-                        <div class="card h-100">
+                    </div>
+                    <div class="col card-container">
+                        <div class="card h-100 cpp">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title text-center">AI Demo</h5>
                                 <p class="card-text">
@@ -171,28 +186,32 @@
                                     map being loaded from a .txt file.
                                 </p>
                                 <div class="d-flex justify-content-center gap-2 mt-auto">
-                                    <a class="btn btn-primary col-5" href="https://github.com/TheTastyGravy/AIProject" type="button">Github</a>
+                                    <a class="btn btn-primary col-5" type="button" href="https://github.com/TheTastyGravy/AIProject">Github</a>
                                 </div>
                             </div>
+                            <small class="card-footer text-muted">C++</small>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card h-100">
+                    <div class="col card-container">
+                        <div class="card h-100 cpp">
+                            <img src="Images/Pinball.png" class="card-img-top" alt="Pinball Image">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-center">Pinball game</h5>
+                                <h5 class="card-title text-center">Pinball Game</h5>
                                 <p class="card-text">
                                     A simple pinball game made in C++ with AIE bootstrap to demonstrate a custom 2D physics engine.
                                 </p>
                                 <div class="d-flex justify-content-center gap-2 mt-auto">
-                                    <a class="btn btn-primary col-5" href="https://github.com/TheTastyGravy/Pinball-Physics" type="button">Github</a>
+                                    <a class="btn btn-primary col-5" type="button" href="https://github.com/TheTastyGravy/Pinball-Physics">Github</a>
                                 </div>
                             </div>
+                            <small class="card-footer text-muted">C++</small>
                         </div>
                     </div>
 
                     <!-- Card template
-                    <div class="col">
+                    <div class="col card-container">
                         <div class="card h-100">
+                            <img src="..." class="card-img-top" alt="...">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title text-center">Test card</h5>
                                 <p class="card-text">
@@ -202,10 +221,11 @@
                                     in voluptate velit esse cillum dolore
                                 </p>
                                 <div class="d-flex justify-content-center gap-2 mt-auto">
-                                    <a class="btn btn-primary col-5" href="#" type="button">button</a>
-                                    <a class="btn btn-primary col-5" href="#" type="button">button</a>
+                                    <a class="btn btn-primary col-5" type="button" href="#">button</a>
+                                    <a class="btn btn-primary col-5" type="button" href="#">button</a>
                                 </div>
                             </div>
+                            <small class="card-footer text-muted"> </small>
                         </div>
                     </div>
                     -->
@@ -213,7 +233,6 @@
             </div>
         </div>
         
-        <!--<hr>-->
         <br>
 
         <!--Contact info-->
@@ -228,4 +247,8 @@
 
         <br><br><br><br><br><br>
     </body>
+
+    <!-- Optional JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </html>
