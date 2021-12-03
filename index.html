@@ -5,8 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="custom.css">
+        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet" type="text/css">
         
         <title>Thomas Dufresne | Game Programmer</title>
     </head>
@@ -53,7 +53,7 @@
 
         <!--Portfolio projects-->
         <div class="portfolio-panel pt-5 pb-2">
-            <div class="px-3 col-12 col-lg-9 col-xl-8 mx-auto" id="Portfolio">
+            <div class="px-3 col-10 col-lg-9 col-xxl-8 mx-auto" id="Portfolio">
                 <h1 class="text-center">Projects</h1>
                 <!--Filters-->
                 <div class="py-2">
@@ -77,10 +77,10 @@
                 </div>
                 
                 <!--Card list-->
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 justify-content-center g-3">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center g-3">
                     <div class="col card-container">
                         <div class="card h-100 unity">
-                            <img src="Images/GoingCritical.png" class="card-img-top" alt="Going Critical Image">
+                            <img src="Images/GoingCritical.png" class="card-img-top rounded-top" alt="Going Critical Image">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title text-center">Going Critical</h5>
                                 <p class="card-text">
@@ -111,22 +111,6 @@
                         </div>
                     </div>
                     <div class="col card-container">
-                        <div class="card h-100 unity">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-center">Ice Track Trains</h5>
-                                <p class="card-text">
-                                    Small Unity game made for a 2 day game jam at AIE in a team of 6. Trains will move along the tracks, 
-                                    and can move between tracks using switch tracks to avoid collisions.
-                                </p>
-                                <div class="d-flex justify-content-center gap-2 mt-auto">
-                                    <a class="btn btn-primary col-5" type="button" href="https://github.com/comi999/Game-Jam">Github</a>
-                                    <a class="btn btn-primary col-5" type="button" href="IceTrackTrains_Build/index.html">Play</a>
-                                </div>
-                            </div>
-                            <small class="card-footer text-muted">Unity</small>
-                        </div>
-                    </div>
-                    <div class="col card-container">
                         <div class="card h-100 cpp">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title text-center">Networked Physics System & Multiplayer FPS</h5>
@@ -147,7 +131,7 @@
                     </div>
                     <div class="col card-container">
                         <div class="card h-100 unity">
-                            <img src="Images/DisappearingAct.png" class="card-img-top" alt="Disapearing Act Image">
+                            <img src="Images/DisappearingAct.png" class="card-img-top rounded-top" alt="Disapearing Act Image">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title text-center">The Disapearing Act</h5>
                                 <p class="card-text">
@@ -163,7 +147,7 @@
                     </div>
                     <div class="col card-container">
                         <div class="card h-100 cpp">
-                            <img src="Images/GLSL.png" class="card-img-top" alt="GLSL Image">
+                            <img src="Images/GLSL.png" class="card-img-top rounded-top" alt="GLSL Image">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title text-center">GLSL Demo</h5>
                                 <p class="card-text">
@@ -194,7 +178,7 @@
                     </div>
                     <div class="col card-container">
                         <div class="card h-100 cpp">
-                            <img src="Images/Pinball.png" class="card-img-top" alt="Pinball Image">
+                            <img src="Images/Pinball.png" class="card-img-top rounded-top" alt="Pinball Image">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title text-center">Pinball Game</h5>
                                 <p class="card-text">
@@ -207,11 +191,27 @@
                             <small class="card-footer text-muted">C++</small>
                         </div>
                     </div>
+                    <div class="col card-container">
+                        <div class="card h-100 unity">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Ice Track Trains</h5>
+                                <p class="card-text">
+                                    Small Unity game made for a 2 day game jam at AIE in a team of 6. Trains will move along the tracks, 
+                                    and can move between tracks using switch tracks to avoid collisions.
+                                </p>
+                                <div class="d-flex justify-content-center gap-2 mt-auto">
+                                    <a class="btn btn-primary col-5" type="button" href="https://github.com/comi999/Game-Jam">Github</a>
+                                    <a class="btn btn-primary col-5" type="button" href="IceTrackTrains_Build/index.html">Play</a>
+                                </div>
+                            </div>
+                            <small class="card-footer text-muted">Unity</small>
+                        </div>
+                    </div>
 
                     <!-- Card template
                     <div class="col card-container">
                         <div class="card h-100">
-                            <img src="..." class="card-img-top" alt="...">
+                            <img src="..." class="card-img-top rounded-top" alt="...">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title text-center">Test card</h5>
                                 <p class="card-text">
@@ -249,6 +249,6 @@
     </body>
 
     <!-- Optional JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="script.js"></script>
 </html>
