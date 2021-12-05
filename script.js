@@ -1,4 +1,4 @@
-const cardObjects = document.getElementsByClassName('card')
+const cardObjects = document.getElementsByClassName('card-custom')
 var cardArray = Object.values(cardObjects)
 const buttonObjects = document.getElementsByClassName('portfolio-button')
 var buttonArray = Object.values(buttonObjects)
