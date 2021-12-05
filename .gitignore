@@ -116,3 +116,10 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Keep the boostrap build, since its needed by the website
+!node_modules/
+node_modules/*
+!node_modules/bootstrap/
+node_modules/bootstrap/*
+!node_modules/bootstrap/dist/
